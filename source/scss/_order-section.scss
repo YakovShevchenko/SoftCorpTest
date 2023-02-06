@@ -1,0 +1,304 @@
+@import "_var";
+
+.order-section {
+    background-image: url('/img/bg-order-section.jpg');
+    color: $colorWhite;
+
+    &__container {
+        padding-top: 120px;
+        padding-bottom: 145px;
+    }
+
+    &__title {
+        margin-top: 0;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 43px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+}
+
+.list-steps {
+    margin: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-width: 209px;
+        max-width: 209px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+
+            background-color: $colorBlue;
+            border: 5px solid $colorBorderCircle;
+            border-radius: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:not(:nth-child(5n))::after {
+            content: url('/img/cirlcles-design.svg');
+            position: absolute;
+            right: -69px;
+            top: 40px;
+        }
+
+        &:nth-child(1)::before {
+            background-image: url('/img/search-ico.svg');
+        }
+
+        &:nth-child(2)::before {
+            background-image: url('/img/procent-ico.svg');
+        }
+
+        &:nth-child(3)::before {
+            background-image: url('/img/addfile-ico.svg');
+        }
+
+        &:nth-child(4)::before {
+            background-image: url('/img/email-ico.svg');
+        }
+
+        &:nth-child(5)::before {
+            background-image: url('/img/dollar-ico.svg');
+        }
+    }
+}
+
+.form-order {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__label-input {
+        width: 33.33%;
+
+        &--file {
+            width: 31.33%;
+        }
+
+        &--range {
+            width: 66%;
+            max-width: 777px;
+            position: relative;
+
+            & #range-value {
+                margin-left: auto;
+                position: absolute;
+                right: 0px;
+            }
+        }
+    }
+
+    &__input {
+        width: 33.33%;
+        max-width: 370px;
+        padding: 11px 35px 11px 10px;
+        box-sizing: border-box;
+        border: 1px solid;
+        border-radius: $borderRadius;
+        font-size: 18px;
+        line-height: 22px;
+        color: $colorDarkBlue;
+
+        &::placeholder {
+            color: $colorDarkBlue;
+        }
+
+        &--range {
+            width: 100%;
+            max-width: 777px;
+            padding: 12px 0;
+            cursor: pointer;
+        }
+
+        &--file {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            display: block;
+            width: 0;
+            height: 0;
+
+            +span {
+                position: relative;
+                display: block;
+                padding: 12px 20px;
+                outline: none;
+                font-size: 15px;
+                line-height: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $colorDarkBlue;
+                text-align: center;
+                border-radius: $borderRadius;
+                background-color: $colorWhite;
+                background-image: url('/img/file-ico.png');
+                background-repeat: no-repeat;
+                background-position: 80px 10px;
+                box-sizing: border-box;
+                border: 2px solid #3E9CDC;
+                margin: 0;
+                transition: background-color ease 0.3s;
+                cursor: pointer;
+                max-width: 370px;
+                width: 100%;
+            }
+
+            +span+.file-name {
+                font-size: 13px;
+                line-height: 1.4;
+                padding: 15px 15px;
+                display: block;
+                max-width: 250px;
+                text-align: center;
+                margin: 0 auto;
+                color: #858282;
+            }
+
+            &:focus+span {
+                box-shadow: #286690;
+            }
+
+            &:hover+span {
+                color: $colorBlue;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .order-section {
+
+        &__container {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+    }
+
+    .form-order {
+        gap: 20px;
+        max-width: 768px;
+        margin: 0 auto;
+
+        &__label-input {
+            width: 33.33%;
+
+            &--file {
+                width: 31.33%;
+            }
+
+            &--range {
+                width: 66%;
+                max-width: 777px;
+                position: relative;
+
+                & #range-value {
+                    margin-left: auto;
+                    position: absolute;
+                    right: 0px;
+                }
+            }
+        }
+
+        &__input {
+            width: 33.33%;
+            max-width: 243px;
+            padding: 12px 35px 12px 10px;
+
+            &--range {
+                width: 100%;
+                max-width: 777px;
+                padding: 12px 0;
+            }
+
+            &--file {
+                +span {
+                    padding: 12px 20px;
+                    max-width: 243px;
+                    width: 100%;
+                    background-position: 15px 10px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .list-steps {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 800px;
+        margin: 80px auto;
+
+        &__item {
+            max-width: 209px;
+
+            &:not(:last-child):after {
+                content: '';
+                position: absolute;
+                right: -69px;
+                top: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 510px) {
+    .order-section {
+
+        &__title {
+            font-size: 30px;
+            line-height: 38px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    .form-order {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+
+        &__label-input {
+
+            &--file {
+                width: 100%;
+            }
+
+            &--range {
+                width: 100%;
+                max-width: 340px;
+                position: relative;
+            }
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .range-capture {
+        max-width: 260px;
+        display: inline-block;
+    }
+}

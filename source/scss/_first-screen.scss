@@ -1,0 +1,110 @@
+.first-screen {
+    background-image: url('/img/bg-first-screen.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 850px;
+
+    &__container {
+        padding-top: 215px;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 95px;
+        max-width: 760px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+        margin: 0 0 10px;
+        max-width: 540px;
+    }
+
+    &__btn-row {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+.first-screen-list {
+    margin-bottom: 78px;
+    max-width: 540px;
+
+    &__item {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .first-screen {
+        background-size: cover;
+        min-height: fit-content;
+
+        &__container {
+            padding-top: 215px;
+            padding-bottom: 100px;
+        }
+
+        &__title {
+            margin-top: 0;
+            margin-bottom: 50px;
+            max-width: 650px;
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        &__subtitle {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0 0 10px;
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    .first-screen {
+        background-position: 45% 0;
+
+        &__container {
+            padding-top: 130px;
+            padding-bottom: 70px;
+        }
+    }
+}
+
+@media (max-width: 510px) {
+    .first-screen {
+        background-position: left;
+
+        &__container {
+            padding-top: 130px;
+            padding-bottom: 70px;
+        }
+
+        &__title {
+            max-width: 380px;
+            font-size: 32px;
+            line-height: 42px;
+        }
+
+        &__btn-row {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 20px;
+        }
+    }
+}

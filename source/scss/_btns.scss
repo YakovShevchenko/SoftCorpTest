@@ -1,0 +1,66 @@
+.btn {
+    box-sizing: border-box;
+    border: 0;
+    border-radius: $borderRadius;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 16px;
+    color: $colorDarkBlueBtn;
+    transition: all ease .3s;
+    cursor: pointer;
+
+    &:hover {
+        transition: all ease .3s;
+    }
+
+    &--blue {
+        background-color: $colorBlue;
+        border: 1px solid $colorWhite;
+        border-radius: 4px;
+        color: $colorWhite;
+        min-width: 182px;
+
+        &:hover {
+            color: $colorBlue;
+            background-color: $colorWhite;
+            border: 1px solid $colorBlue;
+        }
+    }
+
+    &--white {
+        background-color: $colorWhite;
+        min-width: 182px;
+        border: 1px solid $colorDarkBlueBtn;
+        border-radius: 4px;
+
+        &:hover {
+            color: $colorWhite;
+            background-color: $colorDarkBlueBtn;
+            border: 1px solid $colorDarkBlueBtn;
+        }
+    }
+
+    &--submit {
+        background-color: $colorBlue;
+        border: 1px solid $colorWhite;
+        color: $colorWhite;
+        font-weight: 600;
+        margin: 0 auto;
+        min-width: 369px;
+
+        &:hover {
+            color: $colorBlue;
+            background-color: $colorWhite;
+            border: 1px solid $colorBlue;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .btn {
+        &--submit {
+            min-width: 241px;
+        }
+    }
+}

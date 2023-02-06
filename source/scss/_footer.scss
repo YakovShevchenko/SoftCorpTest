@@ -1,0 +1,152 @@
+@import "_var";
+
+.footer {
+    background-color: #3D4050;
+    color: $colorWhite;
+    font-size: $fontSizeSmall;
+    padding: 30px 0;
+    line-height: 20px;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__col {
+        max-width: 30%;
+        box-sizing: border-box;
+    }
+
+    &__col:nth-child(1) {
+        padding-right: 49px;
+    }
+
+    &__col:nth-child(2) {
+        border-right: 1px solid #C3C3C3;
+        border-left: 1px solid #C3C3C3;
+        padding: 0 48px;
+        max-width: 40%;
+    }
+
+    &__col:nth-child(3) {
+        padding-left: 49px;
+    }
+}
+
+.payment-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+        padding-left: 30px;
+        background-position: 0 center;
+        background-repeat: no-repeat;
+    }
+
+    &__item--qiwi {
+        background-image: url('/img/qiwi.svg');
+    }
+
+    &__item--yandex-money {
+        background-image: url('/img/yandex-money.svg');
+    }
+
+    &__item--web-money {
+        background-image: url('/img/webmoney.svg');
+    }
+}
+
+.contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    &__item {
+        padding-left: 30px;
+        background-position: 0 center;
+        background-repeat: no-repeat;
+    }
+
+    &__link {
+        color: $colorWhite;
+        text-decoration: none;
+        transition: all ease .3s;
+
+        &:hover {
+            color: $colorBlue;
+            transition: all ease .3s;
+        }
+    }
+
+    &__item--email {
+        background-image: url('/img/email-small-blue.svg');
+    }
+
+    &__item--vk {
+        background-image: url('/img/vk.svg');
+    }
+}
+
+
+
+.copyright {
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        padding: 15px 0;
+
+        &__row {
+            flex-direction: column;
+        }
+
+        &__col {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        &__col:nth-child(1) {
+            padding-right: 0;
+        }
+
+        &__col:nth-child(2) {
+            border-right: 0;
+            border-left: 0;
+            padding: 0;
+            max-width: 100%;
+        }
+
+        &__col:nth-child(3) {
+            padding-left: 0;
+        }
+    }
+
+    .payment-list {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .list-steps {
+        margin: 50px 0;
+    }
+
+    .payment-list {
+        gap: 10px;
+
+        &__item {
+            padding-left: 25px;
+        }
+    }
+
+    .contacts-list {
+        gap: 10px;
+
+        &__item {
+            padding-left: 25px;
+        }
+    }
+}

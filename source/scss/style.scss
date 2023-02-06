@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('/fonts/Lato-Regular.eot');
+    src: url('/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Lato-Regular.woff2') format('woff2'),
+        url('/fonts/Lato-Regular.woff') format('woff'),
+        url('/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('/fonts/Lato-Bold.eot');
+    src: url('/fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Lato-Bold.woff2') format('woff2'),
+        url('/fonts/Lato-Bold.woff') format('woff'),
+        url('/fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    display: swap;
+}
+
+@import "_var";
+@import "_range-style";
+@import "_btns";
+@import "_reset";
+@import "_selectric";
+
+body {
+    font-family: 'Lato-Regular', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.blue-text {
+    color: $colorBlue;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@import "_header";
+@import "_first-screen";
+@import "_order-section";
+@import "_footer";
